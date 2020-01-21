@@ -1,8 +1,8 @@
-# Ego3DHand
-This repository is for the newest Ego3DHand dataset.
+# Ego3DHands
+This repository is for the newest Ego3DHands dataset.
 
 # Introduction
-This dataset is for the task of two-hand 3D global pose estimation. Therefore it provides images and corresponding labels with the presence of two hands in egocentric view generated using Blender. This dataset can also be used for the task of hand segmentation, 2D, 3D canonical and 3D global hand pose estimation. For hand tracking in dynamic sequences, we also provide a dynamic version of Ego3DHand.
+This dataset is for the task of two-hand 3D global pose estimation. Therefore it provides images and corresponding labels with the presence of two hands in egocentric view generated using Blender. This dataset can also be used for the task of hand segmentation, 2D, 3D canonical and 3D global hand pose estimation. For hand tracking in dynamic sequences, we also provide a dynamic version of Ego3DHands.
 
 Each instance provides:
   * hand image with transparent background
@@ -12,8 +12,8 @@ Each instance provides:
   * 3D global joint locations
   * 3D canonical joint locations
   
-# Ego3DHand static & dynamic
-Ego3DHand dataset provides 2 different versions for the task of static and dynamic pose estiamtion respectively. The static version includes 50,000 training instances and 5,000 test instances. The dynamic version includes 100 training videos and 10 test videos with 500 frames per video sequence.
+# Ego3DHands static & dynamic
+Ego3DHands dataset provides 2 different versions for the task of static and dynamic pose estiamtion respectively. The static version includes 50,000 training instances and 5,000 test instances. The dynamic version includes 100 training videos and 10 test videos with 500 frames per video sequence.
 
 # Download
 Please use the following link for downloading the dataset:
