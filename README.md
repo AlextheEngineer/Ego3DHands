@@ -9,12 +9,20 @@ Each instance provides the following data for both hands:
   * hand image with transparent background
   * hand image with background
   * segmentation masks 
-    * 15 classes with the following labels:
-      * arm - 0
+    * 15 classes with the following labels (left hand => 1~7, right hand => 8~14):
+      * 0: Background
+      * 1: Arm
+      * 2: Palm
+      * 3: Thumb
+      * 4: Index finger
+      * 5: Middle finger
+      * 6: Ring finger
+      * 7: Pinky
+      * 8~14: Repeats the order from class 1 to 8 for the right hand.
   * depth image 
     * Enocded as RGB images such that Depth_val = 1.0"*"B_val + 0.01"*"G_val + 0.0001"*"R_val (cm). Background has value of 0s.
   * 2D joint locations 
-    * Represented as percentages in row and column. Top left is (0.0, 0.0) and bottom right is (1.0, 1.0).
+    * There are 21 joints for each hand. 2D joint locations are represented in form of percentages in row and column. Top left is (0.0, 0.0) and bottom right is (1.0, 1.0).
   * 3D global joint locations
     * Normalized such that the bone length from wrist to the mMCP has length of 10.0cm
   * 3D canonical joint locations 
