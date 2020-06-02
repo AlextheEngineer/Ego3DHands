@@ -20,7 +20,7 @@ Each instance provides the following data for both hands:
       * 7: Pinky
       * 8~14: Repeats the order from class 1 to 8 for the right hand.
   * depth image 
-    * Enocded as RGB images such that Depth_val = 1.0"*"B_val + 0.01"*"G_val + 0.0001"*"R_val (cm). Background has value of 0s.
+    * Enocded as RGB images such that Depth_val = 1.0xB_val + 0.01xG_val + 0.0001xR_val (cm). Background has value of 0s.
   * 2D joint locations 
     * There are 21 joints for each hand. 2D joint locations are represented in form of percentages in row and column. Top left is (0.0, 0.0) and bottom right is (1.0, 1.0).
   * 3D global joint locations
@@ -29,7 +29,7 @@ Each instance provides the following data for both hands:
     * 3D global joint locations spherically rotated to center the middle metacarpophalangeal joint (mMCP), zero-centered on mMCP (root joint) and normalized so the bone formed by the wrist joint and mMCP (key bone) has length of 1.0)
   
 # Ego3DHands static & dynamic
-Ego3DHands dataset provides 2 different versions for the task of static and dynamic pose estiamtion respectively. The static version includes 50,000 training instances and 5,000 test instances. The background images for the static version are randomly selected from approximately 20,000 images within 100 different scene categories from online sources. The dynamic version includes 100 training videos and 10 test videos with 500 frames per video sequence. Each sequence has a unique background sequence selected from www.pexels.com.
+Ego3DHands dataset provides 2 different versions for the task of static and dynamic pose estiamtion respectively. The static version includes 50,000 training instances and 5,000 test instances. The background images for the static version are randomly selected from approximately 20,000 images within 100 different scene categories from online sources. Additionally, the background images are randomly flipped horizontally and color augmented. The dynamic version includes 100 training videos and 10 test videos with 500 frames per video sequence. Each sequence has a unique background sequence selected from www.pexels.com.
 
 # Download
 Please use the following links for downloading the datasets:
