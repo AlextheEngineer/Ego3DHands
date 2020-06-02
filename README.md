@@ -8,7 +8,7 @@ Each instance provides:
   * hand image with transparent background
   * hand image with background
   * segmentation masks (15 classes for the parts of foreground {1~14} and the background {0})
-  * depth image (enocded as RGB images such that Depth = B*1.0 + G*0.01 + R*0.0001)
+  * depth image (enocded as RGB images such that Depth = B**1.0 + G**0.01 + R**0.0001)
   * 2D joint locations (represented as percentages, top left is (0.0, 0.0) and bottom right is (1.0, 1.0))
   * 3D global joint locations (normalized such that the bone length from wrist to the mMCP has length of 10.0cm)
   * 3D canonical joint locations (spherically rotated to the center, zero-centered and normalized so the key bone has length of 1.0)
