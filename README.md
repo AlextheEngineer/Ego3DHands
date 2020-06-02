@@ -27,6 +27,7 @@ Each instance provides the following data for both hands:
     * Normalized such that the bone length from wrist to the mMCP has length of 10.0cm
   * 3D canonical joint locations 
     * 3D global joint locations spherically rotated to center the middle metacarpophalangeal joint (mMCP), zero-centered on mMCP (root joint) and normalized so the bone formed by the wrist joint and mMCP (key bone) has length of 1.0)
+
 Note that some instances only have a single hand present.
 
 # Ego3DHands static & dynamic
