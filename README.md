@@ -1,7 +1,9 @@
 # Ego3DHands
 This repository is for the Ego3DHands dataset.
-![]{dataset_sample_color.png}
-![]{dataset_sample_seg.png}
+
+<img src="image_sample1.png" width="320">    <img src="image_sample1_sideview.png" width="320">
+
+<img src="image_sample2.png" width="320">    <img src="image_sample2_seg.png" width="320">
 
 # Introduction
 This dataset is for the task of two-hand 3D global pose estimation. Therefore it provides images and corresponding labels with the presence of two hands in egocentric view generated using Blender. This dataset can also be used for the task of hand segmentation, 2D, 3D canonical and 3D global hand pose estimation. For hand tracking in dynamic sequences, we also provide a dynamic version of Ego3DHands.
