@@ -6,9 +6,9 @@
 Ego3DHands is a large-scale synthetic dataset for the task of two-hand 3D global pose estimation. It provides images and corresponding labels with the presence of two hands in egocentric view generated using Blender. This dataset can also be used for the task of hand segmentation, 2D, 3D canonical and 3D global hand pose estimation. For hand tracking in dynamic sequences, we provide a dynamic version of Ego3DHands.
 
 Each instance provides the following data for both hands:
-  * hand image with transparent background
-  * hand image with background
-  * segmentation masks 
+  * Hand image with transparent background
+  * Hand image with background
+  * Segmentation masks 
     * 15 classes with the following labels:
       * 0: Background
       * 1: Arm (1~7 is for the left hand)
@@ -19,7 +19,7 @@ Each instance provides the following data for both hands:
       * 6: Ring finger
       * 7: Pinky
       * 8~14: Repeats the order from class 1 to 8 for the right hand.
-  * depth image 
+  * Depth image 
     * Enocded as RGB images such that Depth_val = 1.0xB_val + 0.01xG_val + 0.0001xR_val (cm). Background has value of 0s.
   * 2D joint locations 
     * There are 21 joints for each hand. 2D joint locations are represented in form of percentages in row and column. Top left is (0.0, 0.0) and bottom right is (1.0, 1.0).
