@@ -15,7 +15,7 @@ Each instance provides the following data for both hands:
   * 3D canonical joint locations (spherically rotated to the center, zero-centered and normalized so the key bone has length of 1.0)
   
 # Ego3DHands static & dynamic
-Ego3DHands dataset provides 2 different versions for the task of static and dynamic pose estiamtion respectively. The static version includes 50,000 training instances and 5,000 test instances. The dynamic version includes 100 training videos and 10 test videos with 500 frames per video sequence.
+Ego3DHands dataset provides 2 different versions for the task of static and dynamic pose estiamtion respectively. The static version includes 50,000 training instances and 5,000 test instances. The background images for the static version are randomly selected from approximately 20,000 images within 100 different scene categories from online sources. The dynamic version includes 100 training videos and 10 test videos with 500 frames per video sequence. Each sequence has a unique background sequence selected from www.pexels.com.
 
 # Download
 Please use the following link for downloading the dataset:
