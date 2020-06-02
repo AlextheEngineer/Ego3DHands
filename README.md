@@ -9,7 +9,7 @@ Each instance provides the following data for both hands:
   * hand image with transparent background
   * hand image with background
   * segmentation masks 
-    * 15 classes with the following labels (left hand => 1~7, right hand => 8~14):
+    * 15 classes with the following labels (left hand ":1~7", right hand ":8~14"):
       * 0: Background
       * 1: Arm
       * 2: Palm
