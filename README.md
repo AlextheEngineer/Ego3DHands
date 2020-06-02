@@ -13,7 +13,7 @@ Each instance provides the following data for both hands:
   * 2D joint locations (represented as percentages in row and column, top left is (0.0, 0.0) and bottom right is (1.0, 1.0))
   * 3D global joint locations (normalized such that the bone length from wrist to the mMCP has length of 10.0cm)
   * 3D canonical joint locations 
-  ** 3D global joint locations spherically rotated to center the middle metacarpophalangeal joint (mMCP), zero-centered on mMCP and normalized so the key bone has length of 1.0)
+    * 3D global joint locations spherically rotated to center the middle metacarpophalangeal joint (mMCP), zero-centered on mMCP and normalized so the key bone has length of 1.0)
   
 # Ego3DHands static & dynamic
 Ego3DHands dataset provides 2 different versions for the task of static and dynamic pose estiamtion respectively. The static version includes 50,000 training instances and 5,000 test instances. The background images for the static version are randomly selected from approximately 20,000 images within 100 different scene categories from online sources. The dynamic version includes 100 training videos and 10 test videos with 500 frames per video sequence. Each sequence has a unique background sequence selected from www.pexels.com.
