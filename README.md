@@ -23,6 +23,14 @@ Ego3DHands dataset provides 2 different versions for the task of static and dyna
 # Download
 Please use the following link for downloading the dataset:
 
+Ego3DHands (static):
+https://pan.baidu.com/s/1Z9OSk3WKcUZfYHTJqntLHQ
+password: 5a9c
+
+Ego3Dhands (dynamic):
+https://pan.baidu.com/s/1Ru2e2Cp9O38GkrrTyAVZyA
+password: pmh6
+
 # Evaluation
 For the task of global hand pose estimation, we evaluate in terms of both AUC for the PCK of the 3D canonical hand poses (pose accuracy) and the spherical AUC (directional accuracy & distance accuracy of the root joint). Please see the paper below for more details.
 
