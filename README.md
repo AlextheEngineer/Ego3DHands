@@ -3,7 +3,7 @@
 
 <img src="image_sample2.png" width="320">    <img src="image_sample2_seg.png" width="320">
 
-Ego3DHands is a large-scale synthetic dataset for the task of two-hand 3D global pose estimation. It provides images and corresponding labels with the presence of two hands in egocentric view generated using Blender. This dataset can also be used for the task of hand segmentation, 2D, 3D canonical and 3D global hand pose estimation. For hand tracking in dynamic sequences, we provide a dynamic version of Ego3DHands.
+Ego3DHands is a large-scale synthetic dataset for the task of two-hand 3D global pose estimation. It provides images and corresponding labels with the presence of two hands in egocentric view generated using Blender. This dataset can also be used for the task of hand segmentation, 2D, 3D canonical and 3D global hand pose estimation. For hand tracking in dynamic sequences, we provide a dynamic version of Ego3DHands. This dataset is introduced by our paper [Two-hand Global 3D Pose Estimation Using Monocular RGB](https://arxiv.org/abs/2006.01320).
 
 Each instance provides the following data for both hands:
   * Hand image with transparent background
@@ -37,16 +37,15 @@ Ego3DHands dataset provides 2 different versions for the task of static and dyna
 Please use the following links for downloading the datasets:
 
 Ego3DHands (static):
-https://pan.baidu.com/s/1Z9OSk3WKcUZfYHTJqntLHQ
-password: 5a9c
+https://byu.box.com/s/j5a27ilrxraz94ujlvg3gzf715fiq8ih
 
 Ego3Dhands (dynamic):
-https://pan.baidu.com/s/1Ru2e2Cp9O38GkrrTyAVZyA
-password: pmh6
+https://byu.box.com/s/wtib1zbtmzu9wbwbw1miw8q1oivdbyx6
 
 # Evaluation
 For the task of global hand pose estimation, we evaluate in terms of both AUC for the PCK of the 3D canonical hand poses (pose accuracy) and the spherical AUC (directional accuracy & distance accuracy of the root joint). Please see the paper below for more details.
 
 # License
-This dataset can only be used for scientific/non-commercial purposes. If you use this dataset for your research, please cite the following paper:
-...
+This dataset can only be used for scientific/non-commercial purposes. If you use this dataset in your research, please cite the respective [paper](Two-hand Global 3D Pose Estimation Using Monocular RGB)
+
+
