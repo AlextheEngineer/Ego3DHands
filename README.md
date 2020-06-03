@@ -46,6 +46,6 @@ https://byu.box.com/s/wtib1zbtmzu9wbwbw1miw8q1oivdbyx6
 For the task of global hand pose estimation, we evaluate in terms of both the AUC for the PCK of the 3D canonical hand poses (pose accuracy) and a new metric of the AUC of the spherical PCK of the root joint that computes the distance accuracy and directional accuracy. Please see our paper for more details.
 
 # License
-This dataset can only be used for scientific/non-commercial purposes. If you use this dataset in your research, please cite the respective [paper](https://arxiv.org/abs/2006.01320)
+This dataset can only be used for scientific/non-commercial purposes. If you use this dataset in your research, please cite the corresponding [paper](https://arxiv.org/abs/2006.01320)
 
 
