@@ -33,7 +33,7 @@ Each instance provides the following data for both hands:
     * The ndarray has shape of (2, 22, 3), where the first and second dimension is the same as 2D ndarray, the third dimension is for (row, col, depth). Row value increases going down, column increases going to the right and depth increases going away from the view.
     * Normalized such that the bone length from wrist to the mMCP has length of 10.0cm
   * 3D canonical joint locations 
-    * 3D global joint locations spherically rotated to center the middle metacarpophalangeal joint (mMCP), zero-centered on mMCP (root joint) and normalized so the bone formed by the wrist joint and mMCP (key bone) has length of 1.0)
+    * 3D global joint locations spherically rotated to center the middle metacarpophalangeal joint (mMCP), zero-centered on mMCP (root joint) and normalized so the bone formed by the wrist joint and mMCP (key bone) has length of 1.0). Unlike common methods that generate the canonical poses by simply translating the absolute root joint to the origin, we spherically rotate the joint locations to align the root joint to the center of the view so the visual representation of the hand poses are consistent with the 3D canonical joint locations. In other words, hand poses that have the same visual representation at different global locations should have the same 3D canonical joint loations.
 
 Note that some instances only have a single hand present.
 
