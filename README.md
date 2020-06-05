@@ -22,8 +22,15 @@ Each instance provides the following data for both hands:
   * Depth image 
     * Enocded as RGB images such that Depth_val = 1.0xB_val + 0.01xG_val + 0.0001xR_val (cm). Background has value of 0s.
   * 2D joint locations 
-    * There are 21 joints for each hand. 2D joint locations are represented in form of percentages in row and column. Top left is (0.0, 0.0) and bottom right is (1.0, 1.0).
+    * There are a total of 22 joints for each hand. The ndarray has shape of (2, 22, 2), where the first dimension is for the left and right hand, second dimension is for the 22 joints and third dimension is for row and column percentage value. Top left is (0.0, 0.0) and bottom right is (1.0, 1.0).
+      * 0: Elbow (usually not used and can be ignored)
+      * 1~4: Thumb
+      * 5~8: Index finger
+      * 9~12: Middle finger
+      * 13~16: Ring finger
+      * 17~20: Pinky
   * 3D global joint locations
+    * The ndarray has shape of (2, 22, 3), where the first and second dimension is the same as 2D ndarray, the third dimension is for (row, col, depth). Row value increases going down, column increases going to the right and depth increases going away from the view.
     * Normalized such that the bone length from wrist to the mMCP has length of 10.0cm
   * 3D canonical joint locations 
     * 3D global joint locations spherically rotated to center the middle metacarpophalangeal joint (mMCP), zero-centered on mMCP (root joint) and normalized so the bone formed by the wrist joint and mMCP (key bone) has length of 1.0)
