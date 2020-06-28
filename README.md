@@ -31,7 +31,7 @@ Each instance provides the following data for both hands:
       * 14~17: Ring finger
       * 18~21: Pinky
   * 3D global joint locations
-    * The ndarray has shape of (2, 22, 3), where the first and second dimension is the same as 2D ndarray, the third dimension is for (row, col, depth). Row value increases going down, column increases going to the right and depth increases going away from the view.
+    * The ndarray has shape of (2, 22, 3), where the first and second dimension is the same as 2D ndarray, the third dimension is for (row, col, depth). Row value increases going down, column increases going to the right and depth increases going away from the camera origin.
     * Normalized such that the bone length from wrist to the mMCP has length of 10.0cm
   * 3D canonical joint locations 
     * 3D global joint locations spherically rotated to center the middle metacarpophalangeal joint (mMCP), zero-centered on mMCP (root joint) and normalized so the bone formed by the wrist joint and mMCP (key bone) has length of 1.0). 
