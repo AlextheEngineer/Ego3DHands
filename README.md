@@ -24,11 +24,12 @@ Each instance provides the following data for both hands:
   * 2D joint locations 
     * There are a total of 22 joints for each hand. The ndarray has shape of (2, 22, 2), where the first dimension is for the left and right hand, second dimension is for the 22 joints and third dimension is for row and column percentage value. Top left is (0.0, 0.0) and bottom right is (1.0, 1.0).
       * 0: Elbow (usually not used and can be ignored)
-      * 1~4: Thumb
-      * 5~8: Index finger
-      * 9~12: Middle finger
-      * 13~16: Ring finger
-      * 17~20: Pinky
+      * 1: Wrist
+      * 2~5: Thumb
+      * 6~9: Index finger
+      * 10~13: Middle finger
+      * 14~17: Ring finger
+      * 18~21: Pinky
   * 3D global joint locations
     * The ndarray has shape of (2, 22, 3), where the first and second dimension is the same as 2D ndarray, the third dimension is for (row, col, depth). Row value increases going down, column increases going to the right and depth increases going away from the view.
     * Normalized such that the bone length from wrist to the mMCP has length of 10.0cm
