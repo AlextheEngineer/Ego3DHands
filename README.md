@@ -63,6 +63,11 @@ In order to visualize the 3D joints for both hands, you need to first create the
 - conda install -c anaconda pillow
 - pip install pygame
 - conda install -c anaconda pyopengl
+
+After setting up the environment, you can run the following command:
+- python visualize_3d_pose.py ego_3d_hand
+
+This should load the 2D, 3D canonical and 3D global joint locations from a sample instance in Ego3DHands and output the visualization in 4 angles in /outputs directory.
 # License
 This dataset can only be used for scientific/non-commercial purposes. If you use this dataset in your research, please cite the corresponding [paper](https://arxiv.org/abs/2006.01320)
 
