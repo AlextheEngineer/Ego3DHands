@@ -68,6 +68,7 @@ After setting up the environment, you can run the following command:
 - python visualize_3d_pose.py ego_3d_hand
 
 This should load the 2D, 3D canonical and 3D global joint locations from a sample instance in Ego3DHands and output the visualization in 4 angles in "outputs/" directory. The first person angle should be like this:
+
 <img src="imgs/img_sample_vis1.png" width="240">
 <img src="imgs/img_sample_vis2.png" width="240">
 <img src="imgs/img_sample_vis3.png" width="240">
