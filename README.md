@@ -1,7 +1,7 @@
 # Ego3DHands
-<img src="image_sample1.png" width="320">    <img src="image_sample1_sideview.png" width="320">
+<img src="imgs/image_sample1.png" width="320">    <img src="imgs/image_sample1_sideview.png" width="320">
 
-<img src="image_sample2.png" width="320">    <img src="image_sample2_seg.png" width="320">
+<img src="imgs/image_sample2.png" width="320">    <img src="imgs/image_sample2_seg.png" width="320">
 
 Ego3DHands is a large-scale synthetic dataset for the task of two-hand 3D global pose estimation. It provides images and corresponding labels with the presence of two hands in egocentric view generated using Blender. This dataset can also be used for the task of hand segmentation, 2D, 3D canonical hand pose estimation. For hand tracking in dynamic sequences, we provide a dynamic version of Ego3DHands. This dataset is introduced by our paper [Two-hand Global 3D Pose Estimation Using Monocular RGB](https://arxiv.org/abs/2006.01320).
 
