@@ -54,7 +54,7 @@ https://byu.box.com/s/wtib1zbtmzu9wbwbw1miw8q1oivdbyx6
 # Evaluation
 For the task of global hand pose estimation, we evaluate in terms of both the AUC for the PCK of the 3D canonical hand poses (pose accuracy) and a new metric of the AUC of the spherical PCK of the root joint that computes the distance accuracy and directional accuracy. Please see our paper for more details.
 
-# Visualization
+# Visualization & Global Projection Algorithm
 In order to visualize the 3D joints for both hands, you need to first create the proper environment in Anaconda. We ran the following commands to set up the environment on a Windows machine:
 - conda create --name ego3dhand_vis python=3.6
 - conda activate ego3dhand_vis
@@ -67,7 +67,11 @@ In order to visualize the 3D joints for both hands, you need to first create the
 After setting up the environment, you can run the following command:
 - python visualize_3d_pose.py ego_3d_hand
 
-This should load the 2D, 3D canonical and 3D global joint locations from a sample instance in Ego3DHands and output the visualization in 4 angles in /outputs directory.
+This should load the 2D, 3D canonical and 3D global joint locations from a sample instance in Ego3DHands and output the visualization in 4 angles in "outputs/" directory. The first person angle should be like this:
+<img src="imgs/image_sample_vis.png" width="320">
+
+This script also contains our global projection algorithm, which computes the 3D global joint locations using the 2D, 3D canonical joint locations, camera intrinsics and key bone length. This script can be applied to compute the global 3D keypoint locations of any object given the aforementioned information.
+
 # License
 This dataset can only be used for scientific/non-commercial purposes. If you use this dataset in your research, please cite the corresponding [paper](https://arxiv.org/abs/2006.01320)
 
