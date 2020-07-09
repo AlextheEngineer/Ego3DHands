@@ -68,7 +68,9 @@ After setting up the environment, you can run the following command:
 - python visualize_3d_pose.py ego_3d_hand
 
 This should load the 2D, 3D canonical and 3D global joint locations from a sample instance in Ego3DHands and output the visualization in 4 angles in "outputs/" directory. The first person angle should be like this:
-<img src="imgs/image_sample_vis.png" width="320">
+<img src="imgs/image_sample_vis1.png" width="240">
+<img src="imgs/image_sample_vis2.png" width="240">
+<img src="imgs/image_sample_vis3.png" width="240">
 
 This script also contains our global projection algorithm, which computes the 3D global joint locations using the 2D, 3D canonical joint locations, camera intrinsics and key bone length. This script can be applied to compute the global 3D keypoint locations of any object given the aforementioned information.
 
