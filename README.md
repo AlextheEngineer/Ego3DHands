@@ -38,9 +38,9 @@ Each instance provides the following data for both hands:
     * Unlike common methods that generate the canonical poses by simply translating the absolute root joint to the origin, we spherically rotate the joint locations to align the root joint to the center of the view so the visual representation of the hand poses are consistent with the 3D canonical joint locations. In other words, hand poses that have the same visual representation at different global locations should have the same 3D canonical joint loations.
   * Camera Intrinsi Matrix
     * Since we provide our 2D coordinates in form of percentages of the image size, the actual 2D coordiantes can be easily computed for images with any resized dimensions. As a result, the camera intrisic matrix changes for different image sizes and can be computed as shown below.
-    *         [[f, 0, px]
-      For K = [0, f, py],  px = IMG_H/2, py = IMG_W/2. For any joint in the dataset, f = (x_2d - px)*z/x_3d or (y_2d - py)*z/y_3d. 
-              [0, 0, 1]]
+      * For K = [[f, 0, px], [0, f, py], [0, 0, 1]]. Note that our coordinates are in the format of (row, column, depth), so x, y, z correlates with the row, column, depth dimension respectively.
+      * For any joint in the dataset, px = IMG_H/2, py = IMG_W/2, f = (x_2d*IMG_H - px)*z_3d/x_3d or (y_2d*IMG_W - py)*z_3d/y_3d, where x_2d, x_3d, y_2d, y_3d, z_3d are original provided values in the dataset for any joint.
+      * For the image size (270, 480) we use in our paper, K = [[187.932, 0, 135], [0, 187.932, 240], [0, 0, 1]].
 
 Note that some instances only have a single hand present.
 
