@@ -57,7 +57,7 @@ Ego3Dhands (dynamic):
 https://byu.box.com/s/wtib1zbtmzu9wbwbw1miw8q1oivdbyx6
 
 # Evaluation
-For the task of global hand pose estimation, we evaluate in terms of both the AUC for the PCK of the 3D canonical hand poses (pose accuracy) and a new metric of the AUC of the spherical PCK of the root joint that computes the distance accuracy and directional accuracy. Please see our paper for more details.
+For the task of global hand pose estimation, we evaluate in terms of both the AUC for the PCK of the 3D canonical hand poses (pose accuracy) and a new metric of the AUC of the spherical PCK of the root joint that computes the distance accuracy and directional accuracy. Please see our [paper](https://arxiv.org/abs/2006.01320) for more details.
 
 # Visualization & Global Projection Algorithm
 In order to visualize the 3D joints for both hands, you need to first create the proper environment in Anaconda. We ran the following commands to set up the environment on a Windows machine:
