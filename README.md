@@ -37,9 +37,10 @@ Each instance provides the following data for both hands:
     * 3D global joint locations spherically rotated to center the mMCP, zero-centered on mMCP and normalized so the bone formed by the wrist joint and mMCP (key bone) has length of 1.0). 
     * Unlike common methods that generate the canonical poses by simply translating the absolute root joint to the origin, we spherically rotate the joint locations to align the root joint to the center of the view so the visual representation of the hand poses are consistent with the 3D canonical joint locations. In other words, hand poses that have the same visual representation at different global locations should have the same 3D canonical joint loations.
   * Camera Intrinsi Matrix
-    * Since we provide our 2D coordinates in form of percentages of the image size, the actual 2D coordiantes can be easily computed for images with any resized dimensions. As a result, the camera intrisic matrix changes for different image sizes.
-    For K = [f, 0, px]
-    
+    * Since we provide our 2D coordinates in form of percentages of the image size, the actual 2D coordiantes can be easily computed for images with any resized dimensions. As a result, the camera intrisic matrix changes for different image sizes and can be computed as shown below.
+    *         [[f, 0, px]
+      For K = [0, f, py],  px = IMG_H/2, py = IMG_W/2. For any joint in the dataset, f = (x_2d - px)*z/x_3d or (y_2d - py)*z/y_3d. 
+              [0, 0, 1]]
 
 Note that some instances only have a single hand present.
 
