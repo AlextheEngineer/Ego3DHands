@@ -42,7 +42,7 @@ Each instance provides the following data for both hands:
       * For any joint in the dataset, px = IMG_H / 2, py = IMG_W / 2, fx = (x_2d - 0.5) * IMG_H * z_3d / x_3d and fy = (y_2d - 0.5) * IMG_W * z_3d / y_3d, where x_2d, x_3d, y_2d, y_3d, z_3d are the provided original values in the dataset for any joint.
       * For the image size (270, 480) we use in our paper, K = [[187.932, 0, 135], [0, 187.932, 240], [0, 0, 1]]. For any image with size (IMG_H, IMG_W), you could also compute the K matrix value using px = IMG_H / 2, py = IMG_W / 2, fx = 187.932 * IMG_H / 270 and fy = 187.932 * IMG_W / 480.
 
-Note that some instances only have a single hand present.
+Note that some instances only have a single hand present, in that case the missing hand will have values of zero for its joint locations.
 
 # Ego3DHands static & dynamic
 Ego3DHands dataset provides 2 different versions for the task of static and dynamic pose estiamtion respectively. The static version includes 50,000 training instances and 5,000 test instances. The background images for the static version are randomly selected from approximately 20,000 images within 100 different scene categories from online sources. Additionally, the background images are randomly flipped horizontally and color augmented. The dynamic version includes 100 training videos and 10 test videos with 500 frames per video sequence. Each sequence has a unique background sequence selected from www.pexels.com.
