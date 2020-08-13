@@ -39,7 +39,7 @@ Each instance provides the following data for both hands:
   * Camera Intrinsi Matrix
     * Since we provide our 2D coordinates in form of percentages of the image size, the actual 2D coordiantes can be easily computed for images with any resized dimensions. As a result, the camera intrisic matrix changes for different image sizes and can be computed as shown below.
       * For K = [[f, 0, px], [0, f, py], [0, 0, 1]]. Note that our coordinates are in the format of (row, column, depth), so x, y, z correlates with the row, column, depth dimension respectively.
-      * For any joint in the dataset, px = IMG_H/2, py = IMG_W/2, f = (x_2d*IMG_H - px)*z_3d/x_3d or (y_2d*IMG_W - py)*z_3d/y_3d, where x_2d, x_3d, y_2d, y_3d, z_3d are original provided values in the dataset for any joint.
+      * For any joint in the dataset, px = IMG_H/2, py = IMG_W/2, f = (x_2d*IMG_H - px)*z_3d/x_3d or (y_2d*IMG_W - py)*z_3d/y_3d, where x_2d, x_3d, y_2d, y_3d, z_3d are the provided original values in the dataset for any joint.
       * For the image size (270, 480) we use in our paper, K = [[187.932, 0, 135], [0, 187.932, 240], [0, 0, 1]].
 
 Note that some instances only have a single hand present.
