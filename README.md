@@ -20,7 +20,7 @@ Each instance provides the following data for both hands:
       * 7: Pinky
       * 8~14: Repeats the order from class 1 to 8 for the right hand.
   * Depth image 
-    * Enocded as RGB images such that Depth_val = 1.0xB_val + 0.01xG_val + 0.0001xR_val (cm). Background has value of 0s.
+    * Enocded as RGB images such that Depth_val = 1.0 * B_val + 0.01 * G_val + 0.0001 * R_val (cm). Background has value of 0s.
   * 2D joint locations 
     * There are a total of 22 joints for each hand. The ndarray has shape of (2, 22, 2), where the first dimension is for the left and right hand, second dimension is for the 22 joints and third dimension is for row and column percentage value. Top left is (0.0, 0.0) and bottom right is (1.0, 1.0).
       * 0: Elbow (usually not used and can be ignored)
