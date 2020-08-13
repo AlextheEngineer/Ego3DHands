@@ -41,6 +41,7 @@ Each instance provides the following data for both hands:
       * For K = [[fx, 0, px], [0, fy, py], [0, 0, 1]]. Note that our coordinates are in the format of (row, column, depth), so x, y, z correlates with the row, column, depth dimension respectively.
       * For any joint in the dataset, px = IMG_H / 2, py = IMG_W / 2, fx = (x_2d - 0.5) * IMG_H * z_3d / x_3d and fy = (y_2d - 0.5) * IMG_W * z_3d / y_3d, where x_2d, x_3d, y_2d, y_3d, z_3d are the provided original values in the dataset for any joint.
       * For the image size (270, 480) we use in our paper, K = [[187.932, 0, 135], [0, 187.932, 240], [0, 0, 1]]. For any image with size (IMG_H, IMG_W), you could also compute the K matrix value using px = IMG_H / 2, py = IMG_W / 2, fx = 187.932 * IMG_H / 270 and fy = 187.932 * IMG_W / 480.
+      * The K matrix is consistent for the entire dataset given a specific image size.
 
 Note that some instances only have a single hand present, in that case the missing hand will have values of zero for its joint locations.
 
