@@ -3,7 +3,7 @@
 
 <img src="imgs/image_sample2.png" width="320">    <img src="imgs/image_sample2_seg.png" width="320">
 
-Ego3DHands is a large-scale synthetic dataset for the task of two-hand 3D global pose estimation. It provides images and corresponding labels with the presence of two hands in egocentric view generated using Blender. This dataset can also be used for the task of hand segmentation, 2D, 3D canonical hand pose estimation. For hand tracking in dynamic sequences, we provide a dynamic version of Ego3DHands. This dataset is introduced by our paper [Two-hand Global 3D Pose Estimation Using Monocular RGB](https://arxiv.org/abs/2006.01320).
+Ego3DHands is a large-scale synthetic dataset for the task of two-hand 3D global pose estimation. It provides images and corresponding labels with the presence of two hands in egocentric view generated using Blender. This dataset can also be used for the task of hand segmentation, 2D, 3D canonical hand pose estimation. For hand tracking in dynamic sequences, we provide a dynamic version of Ego3DHands. This dataset is introduced by our paper [Two-hand Global 3D Pose Estimation Using Monocular RGB](https://openaccess.thecvf.com/content/WACV2021/html/Lin_Two-Hand_Global_3D_Pose_Estimation_Using_Monocular_RGB_WACV_2021_paper.html).
 
 Each instance provides the following data for both hands:
   * Hand image with transparent background
@@ -58,7 +58,7 @@ Ego3Dhands (dynamic):
 https://byu.box.com/s/wtib1zbtmzu9wbwbw1miw8q1oivdbyx6
 
 # Evaluation
-For the task of global hand pose estimation, we evaluate in terms of both the AUC for the PCK of the 3D canonical hand poses (pose accuracy) and a new metric of the AUC of the spherical PCK of the root joint that computes the distance accuracy and directional accuracy. Please see our [paper](https://arxiv.org/abs/2006.01320) for more details.
+For the task of global hand pose estimation, we evaluate in terms of both the AUC for the PCK of the 3D canonical hand poses (pose accuracy) and a new metric of the AUC of the spherical PCK of the root joint that computes the distance accuracy and directional accuracy. Please see our [paper](https://openaccess.thecvf.com/content/WACV2021/html/Lin_Two-Hand_Global_3D_Pose_Estimation_Using_Monocular_RGB_WACV_2021_paper.html) for more details.
 
 # Visualization & Global Projection Algorithm
 In order to visualize the 3D joints for both hands, you need to first create the proper environment in Anaconda. We ran the following commands to set up the environment on a Windows machine:
@@ -82,6 +82,6 @@ We have included camera intrinsics for Stereo Tracking Benchmark Dataset (STB) a
 This script also contains our global projection algorithm, which computes the 3D global joint locations using the 2D, 3D canonical joint locations, camera intrinsics and key bone length. This algorithm can be applied to compute the global 3D keypoint locations of any object given the aforementioned information.
 
 # License
-This dataset can only be used for scientific/non-commercial purposes. If you use this dataset in your research, please cite the corresponding [paper](https://arxiv.org/abs/2006.01320)
+This dataset can only be used for scientific/non-commercial purposes. If you use this dataset in your research, please cite the corresponding [paper](https://openaccess.thecvf.com/content/WACV2021/html/Lin_Two-Hand_Global_3D_Pose_Estimation_Using_Monocular_RGB_WACV_2021_paper.html)
 
 
