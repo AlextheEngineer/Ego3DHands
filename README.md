@@ -77,7 +77,7 @@ This should load the 2D, 3D canonical and 3D global joint locations from a sampl
 
 <img src="imgs/img_sample_vis1.png" width="320">  <img src="imgs/img_sample_vis2.png" width="320">  <img src="imgs/img_sample_vis3.png" width="320">
 
-We have included camera intrinsics for Stereo Tracking Benchmark Dataset (STB) and Rendered Hand Pose Dataset (RHP). However, you would need to add in the samples from these other datasets and process the joints the same way we do in order for the script to function properly. Samples from other datasets can be added as well but the corresponding camera intrinsics would also need to be added into the existing script.
+We have included camera intrinsics for Stereo Tracking Benchmark Dataset (STB) and Rendered Hand Pose Dataset (RHP). However, you would need to add in the samples from these other datasets and process the joints the same way we do in order for the script to function properly. Samples from other datasets can be added as well but the corresponding camera intrinsics would also need to be added into the existing script (e.g. refer to the issue tab for running the algorithm on [InterHand2.6M](https://mks0601.github.io/InterHand2.6M/)).
 
 This script also contains our global projection algorithm, which computes the 3D global joint locations using the 2D, 3D canonical joint locations, camera intrinsics and key bone length. This algorithm can be applied to compute the global 3D keypoint locations of any object given the aforementioned information.
 
