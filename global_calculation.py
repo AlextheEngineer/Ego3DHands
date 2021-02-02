@@ -27,6 +27,46 @@ X = 1
 Y = 0
 Z = 2
 
+# Transforms the global 3D joint locations to canonical 3D joint locations by spherically rotating
+# the hand pose to the center of the view, zero-centering and normalizing.
+def global_to_canon(global_hand, MIDDLE_FINGER_1 = 9, WRIST = 0):
+    X = 1
+    Y = 0
+    Z = 2
+    # For drop-out hands:
+    if np.all(global_hand == 0):
+       return np.zeros(global_hand.shape)
+    ## CHANGE OF BASE 3D
+    # The camera's focus is on 0,0,0: the current basis is {[[1],[0],[0]], [[0],[1],[0]], [[0],[0],[1]]}
+    # We want it to focus on left_center for the left hand and right_center for the right_hand, with the z 0 value staying on the origin
+    # Our basis' z vector for each center will be [[xc],[yc],[zc]]
+    affine = np.transpose(global_hand)
+    center = affine[:,MIDDLE_FINGER_1]
+
+    # we want to rotate the system such that the vector 0,0,1 is now xc,yc,zc or equivalent
+    an_x = math.atan2(center[Y], center[Z])
+    rot_x = np.array([[math.cos(an_x),0,-math.sin(an_x)],[0,1,0],[math.sin(an_x),0,math.cos(an_x)]])
+    affine = np.dot(rot_x, affine)
+    center = affine[:,MIDDLE_FINGER_1]
+
+    an_y = math.atan2(center[X], center[Z])
+    rot_y = np.array([[1,0,0],[0,math.cos(an_y),-math.sin(an_y)],[0,math.sin(an_y),math.cos(an_y)]])
+    base_changed = np.dot(rot_y, affine)
+    
+    # Translate to center point (rotation should ensure that center's x and y are close to 0, but z is not)
+    pos_canon = np.transpose(base_changed)
+    center = pos_canon[MIDDLE_FINGER_1,:]
+
+    pos_canon[:,X] -= center[X]
+    pos_canon[:,Y] -= center[Y]
+    pos_canon[:,Z] -= center[Z]
+    wrist = pos_canon[WRIST, :]#pos_canon[1,:]
+    # normalize the matrix
+    # the normalizer is the distance between the left hand to the origin (middle finger 1)
+    normalizer = math.sqrt((wrist[X] * wrist[X]) + (wrist[Y] * wrist[Y]) + (wrist[Z] * wrist[Z]))
+    pos_canon /= normalizer
+    return pos_canon
+
 # Transforms the 2D positions and canonical hand orientation into the global hand positions.
 # If a global position matrix is provided as ground truth, the difference (prediction - ground truth) will be printed
 def canon_to_global(pos_2d, pos_can_3d):
